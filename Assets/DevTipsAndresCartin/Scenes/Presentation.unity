@@ -1287,24 +1287,22 @@ PrefabInstance:
     - target: {fileID: 2807700514780659915, guid: d5511c0d1994f5d46bd79609d358251f,
         type: 3}
       propertyPath: m_text
-      value: 'TUANIS ES MI SEGUNDO NOMBRE
-
-'
+      value: TUANIS ES MI SEGUNDO NOMBRE
       objectReference: {fileID: 0}
     - target: {fileID: 2807700514780659915, guid: d5511c0d1994f5d46bd79609d358251f,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 113
+      value: 27
       objectReference: {fileID: 0}
     - target: {fileID: 2807700514780659915, guid: d5511c0d1994f5d46bd79609d358251f,
         type: 3}
       propertyPath: m_textInfo.wordCount
-      value: 15
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2807700514780659915, guid: d5511c0d1994f5d46bd79609d358251f,
         type: 3}
       propertyPath: m_textInfo.lineCount
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2807700514780659915, guid: d5511c0d1994f5d46bd79609d358251f,
         type: 3}
@@ -1314,7 +1312,7 @@ PrefabInstance:
     - target: {fileID: 2807700514780659915, guid: d5511c0d1994f5d46bd79609d358251f,
         type: 3}
       propertyPath: m_textInfo.spaceCount
-      value: 17
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2807700514780659915, guid: d5511c0d1994f5d46bd79609d358251f,
         type: 3}
@@ -13902,10 +13900,10 @@ PrefabInstance:
     - target: {fileID: 2807700514780659915, guid: d5511c0d1994f5d46bd79609d358251f,
         type: 3}
       propertyPath: m_text
-      value: "Excelente para que las cosas se vean un poquito mejor! Y ayudan muichisimo
+      value: "Excelente para que las cosas se vean un poquito mejor! Y ayudan muchisimo
         a animar cosas!\n- DOTween es mi preferida en Unity\n- Permite facilmente
         decirle a un objeto de cualquier tipo que anime:\n     - Transform\n     -
-        Color\n     - Hasta variables de shaders!"
+        Color\n     - Hasta variables de shaders!\n"
       objectReference: {fileID: 0}
     - target: {fileID: 2807700514780659915, guid: d5511c0d1994f5d46bd79609d358251f,
         type: 3}
@@ -18871,7 +18869,7 @@ PrefabInstance:
     - target: {fileID: 3302813776107389228, guid: d5511c0d1994f5d46bd79609d358251f,
         type: 3}
       propertyPath: m_text
-      value: Messenger demo
+      value: Con paleta
       objectReference: {fileID: 0}
     - target: {fileID: 3302813776107389228, guid: d5511c0d1994f5d46bd79609d358251f,
         type: 3}
@@ -19932,7 +19930,7 @@ PrefabInstance:
     - target: {fileID: 3302813776107389228, guid: d5511c0d1994f5d46bd79609d358251f,
         type: 3}
       propertyPath: m_text
-      value: Messenger demo
+      value: Sin paleta
       objectReference: {fileID: 0}
     - target: {fileID: 3302813776107389228, guid: d5511c0d1994f5d46bd79609d358251f,
         type: 3}
