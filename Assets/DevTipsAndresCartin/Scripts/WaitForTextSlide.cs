@@ -11,6 +11,7 @@ namespace DevTipsAndresCartin
 {
     public class WaitForTextSlide: Slide
     {
+        public bool waitForText = true;
         private TextMeshProUGUI _textToSplit;
         private string[] _strings;
         private int _currentLine;
@@ -18,11 +19,10 @@ namespace DevTipsAndresCartin
         private void Start()
         {
             _textToSplit = transform.Find("Description").GetComponent<TextMeshProUGUI>();
-            if (_textToSplit.isActiveAndEnabled)
+            if (_textToSplit.isActiveAndEnabled && waitForText)
                 _strings = _textToSplit.text.Split(new string[] { "\n" }, StringSplitOptions.None);
             else
-                _strings = new string[];
-            Debug.Log("STRING COUNT: " + _strings.Length);
+                _strings = new string[0];
         }
 
         private void OnEnable()
@@ -48,8 +48,6 @@ namespace DevTipsAndresCartin
                     }
                     else
                         _currentLine--;
-
-                    Debug.Log("STRING " +_currentLine);
 
                     _textToSplit.maxVisibleLines = _currentLine;
 

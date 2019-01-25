@@ -46,6 +46,9 @@ namespace DevTipsAndresCartin
             while (slideIndex < slides.Length)
             {
                 yield return CurrentSlide.Execute();
+
+                if (Input.GetKey(KeyCode.LeftShift))
+                    SlideIndex = slides.Length - 2;
                 switch (CurrentSlide.exitMode)
                 {
                     case Slide.ExitMode.Next:

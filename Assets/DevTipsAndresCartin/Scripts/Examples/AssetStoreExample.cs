@@ -1,5 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
+using DG.Tweening;
+using DevTipsAndresCartin.Util;
 
 namespace DevTipsAndresCartin.Examples
 {
@@ -12,6 +14,8 @@ namespace DevTipsAndresCartin.Examples
         public float timeToSpawn = 0.5f;
         public float timeToDestroyGfx = 3;
 
+        public Transform transformToSpin;
+
         private void OnEnable()
         {
             StartCoroutine(Execute());
@@ -21,17 +25,24 @@ namespace DevTipsAndresCartin.Examples
         {
         }
 
-        private IEnumerator Execute()
+        private void OnDrawGizmos()
         {
-            foreach (var fx in fxPrefabs)
-            {
-                var instance = Instantiate(fx, transform);
-                Vector3 v = max.localPosition - min.localPosition;
-                instance.transform.localPosition = min.localPosition + Random.value * v;
-                Destroy(instance, timeToDestroyGfx);
-                yield return new WaitForSeconds(timeToSpawn);
-            }
+            Gizmos.DrawWireCube((max.position + min.position) / 2, max.position - min.position);
         }
 
+        private IEnumerator Execute()
+        {
+            transformToSpin.DORotate(new Vector3(0, 360, 0), 2f, RotateMode.FastBeyond360).SetLoops(-1, LoopType.Incremental);
+            while (true)
+            {
+                foreach (var fx in fxPrefabs)
+                {
+                    var instance = Instantiate(fx, transform);
+                    instance.transform.localPosition = RandomUtil.Vector3(min.localPosition, max.localPosition);
+                    Destroy(instance, timeToDestroyGfx);
+                    yield return new WaitForSeconds(timeToSpawn);
+                }
+            }
+        }
     }
 }
