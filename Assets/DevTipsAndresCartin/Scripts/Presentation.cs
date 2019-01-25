@@ -29,8 +29,8 @@ namespace DevTipsAndresCartin
                     slidesList.Add(slide);
                     child.gameObject.SetActive(false);
                 }
-                slides = slidesList.ToArray();
-                //slides = slidesList.OrderBy(s => s.name).ToArray();
+                //slides = slidesList.ToArray();
+                slides = slidesList.OrderBy(s => s.name).ToArray();
 
                 if (slides.Length > 0)
                 {
