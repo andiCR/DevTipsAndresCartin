@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/_App/Scenes/Presentation.unity
+    path: Assets/DevTipsAndresCartin/Scenes/Presentation.unity
     guid: 400f85cdd1447a34f9c92b2675700efa
   m_configObjects: {}
