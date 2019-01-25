@@ -12,5 +12,12 @@ namespace DevTipsAndresCartin.Util
                 Random.Range(minPosition.y, maxPosition.y),
                 Random.Range(minPosition.z, maxPosition.z));
         }
+
+        public static T RandomElement<T>(this T[] list)
+        {
+            if (list.Length == 0)
+                return default;
+            return list[Random.Range(0, list.Length)];
+        }
     }
 }
